@@ -1,0 +1,245 @@
+body {
+    color: #00FFFF;
+    font-family: 'Comfortaa', cursive;
+    text-shadow: #0C0075 2px 2px 2px;
+    background-image: linear-gradient(#20B2AA, #0000FF); /*linear-gradient is used here to allow colors to fuse for the background.*/
+}/*
+.background {
+    background-repeat: no-repeat;
+}*/
+p{
+    color:#95FFE5;
+}
+h2 {
+    font-family: 'Orbitron', sans-serif;
+}
+a{
+    list-style: none;
+    color:#FFF;
+    text-decoration: none;
+}
+a:hover{
+    list-style: none;
+    text-decoration: none;
+    color:#FFF;
+}
+.about {
+    text-align: center; /*aligns the headers to be centered.*/
+}
+.floater { /*used to move the nav buttons.*/
+    float: right;
+}
+.thumb {
+    width: 350px;
+    height: 200px;
+    box-shadow:#0C0075 2px 2px 2px;
+    opacity: 0.9;
+}
+.avatar {
+    margin:auto;
+    box-shadow:#0C0075 2px 2px 2px;
+    opacity: 0.9;
+    height: 200px;
+    width: 200px;
+    border-radius: 100px; /*makes the image round.*/
+}
+.border {
+    border-bottom:#002B89 solid 4px;
+    margin-top: 30px;
+    box-shadow:#0C0075 5px 5px 5px;
+}
+.button-default {
+    color: #FFF;
+    background-color: #009494;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 5px 25px;
+    margin: 10px;
+    display: inline-block;
+    box-align: right;
+    box-shadow:#0C0075 2px 2px 2px;
+}
+.button-slanted {
+    transform: skewX(-20deg); /*skewX is what gives the nav buttons the slanted design.*/
+}
+.button-slanted-content { /*this class keeps the text from being slanted like the rest of the buttons.*/
+    transform: skewX(20deg);
+    display: inline-block;
+}
+.button-default:hover{
+    background-color:#00CCCC;
+}
+.item { /*all of the item classes are used to make the hover effect on the thumbnails function.*/
+    position: relative;
+    width: 350px;
+    margin: 20px auto;
+    overflow: hidden;
+    box-shadow:#0C0075 2px 2px 2px;
+}
+.item img {
+    width: 350px;
+    height: 200px;
+}
+.item .info {
+    width: 350px;
+    height: 200px;
+    background:rgba(0, 0, 0, 0.7); /*this color code is being used to apply opacity to the class without using any additional rules being used.*/
+    position: absolute;
+    top: 0px;
+    left: -350px;
+    opacity: 0;
+    color:#00FFFF;
+    transition: left .2s linear, opacity .2s linear; /*transition is used here to allow the hover effect to slide.*/
+}
+.item:hover .info { /*this is where the projects' hover text appears.*/
+    left: 0px;
+    opacity: 1;
+    transition: left .2s linear, opacity .2s linear;
+}
+.item h2 {
+    padding-left: 25px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 40px;
+    margin: 0;
+    padding: 20px 0px 5px 0px;
+    text-align: center;
+    color: #00FFFF;
+}
+.item p {
+    padding: 0px 18px;
+    text-align: center;
+    font-family: Helvetica, Arial;
+}
+.more-btn {
+    display: inline-block;
+    color: #7FFFD4;
+    text-decoration: none;
+    border-radius: 28px;
+    font-family: 'Comfortaa', cursive;
+    background: #2980B9;
+    padding: 11px 20px;
+    opacity: 0.9;
+    margin-left: 39%;
+    margin-top: 15px;
+    transition: .2s linear; /*the project buttons have the same slide time as the rest of the item classes.*/
+}
+.more-btn:hover {
+    background: #7FB3D5;
+    transition: .2s linear;
+}
+.central { /*used for the "Web Projects" text.*/
+    margin-bottom: -12px;
+}
+.footer-bar {
+    background:#003030;
+    opacity: 0.7;
+    width: 100%;
+}
+.social-ref { /*my social links are stored within this class.*/
+    background:#001616;
+    opacity: 0.7;
+    width: 100%;
+    height:50px;
+}
+.social-text {
+    font-size:20px;
+    margin-top:30px;
+    color:#00FFFF;
+}
+.social-text a{
+    color:#00FFFF;
+}
+.social-text a:hover{
+    color:#FFF;
+}
+.fab{ /*this class is being used to resize the text of my social links.*/
+    font-size: 20px;
+    margin-right: 5px;
+}
+@media (min-width:0px) and (max-width:364px){ /* 0px-991px - resolution size for tablets and phones.*/
+    .social-ref{
+        height:275px;
+        width:114%;
+    }
+    .footer-bar{
+        width:114%;
+    }
+    .border{
+        width:114%;
+    }
+    .btn-resize{
+        padding:4px 6px;
+        font-size:12px;
+        margin:1px;
+    }
+}
+@media (min-width:365px) and (max-width:768px){
+    .social-ref{
+        height:275px;
+    }
+    .btn-resize{
+        padding:4px 6px;
+        font-size:13px;
+        margin:4px;
+    }
+}
+@media (min-width:768px) and (max-width:992px){
+    .footer-bar{
+        width:110%;
+        height:240px;
+    }
+    .border{
+        width:110%;
+    }
+    .social-ref{
+        height:54px;
+        width:110%;
+    }
+    .social-text{
+        margin-top:15px;
+    }
+    .hider{
+        display:none; /*hides the "Interests" nav button on smaller resolutions.*/
+    }
+    .hider2{
+        display:none; /*hides the freecodecamp icon so that it fits the resolution.*/
+    }
+}
+@media (min-width:992px) and (max-width:1199px){ /* 992px & up - resolution size for laptops/desktops.*/
+    img.small{
+        width:300px;
+        height:180px;
+    }
+    .item {
+        position: relative;
+        width: 300px;
+        margin: 20px auto;
+    }
+    .item img {
+        width: 300px;
+        height: 180px;
+    }
+    .item .info {
+        width: 300px;
+        height: 180px;
+        top: 0px;
+        left: -300px;
+    }
+    .social-ref{
+        height:50px;
+    }
+    .social-text{
+        margin-top:12px;
+    }
+}
+@media (min-width:1200px){
+    .footer-bar{
+        height:180px;
+    }
+    .social-ref{
+        height:45px;
+    }
+    .social-text{
+        margin-top:9px;
+    }
+}
